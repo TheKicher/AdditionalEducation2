@@ -11,7 +11,9 @@
         android:layout_width="match_parent"
         android:layout_height="?android:actionBarSize"
         android:background="@android:color/white"
-
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/menu_more">
 
         <TextView
@@ -19,7 +21,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Главная"
+            android:text="Ещё"
             android:textAlignment="center"
             android:textColor="@android:color/black"
             android:textSize="20sp"
@@ -231,6 +233,20 @@
             android:paddingBottom="12dp"
             android:text="Помощь"
             android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/bSignGoOut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickAdd"
+            android:text="Добавить" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickSignGoOut"
+            android:text="выход" />
 
     </LinearLayout>
 

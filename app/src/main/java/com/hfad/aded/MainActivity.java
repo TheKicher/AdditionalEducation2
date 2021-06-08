@@ -1,33 +1,66 @@
 package com.hfad.aded;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.hfad.aded.ui.Home.HomeFragment;
+import com.hfad.aded.ui.Search.SearchFragment;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 public class MainActivity extends AppCompatActivity {
 
+    private BottomNavigationView bottomNavigationView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
 
-        BottomNavigationView navView = findViewById(R.id.nav_view);
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.navigation_home, R.id.navigation_dashboard)
-                .build();
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-        NavigationUI.setupWithNavController(navView, navController);
+        bottomNavigationView = findViewById(R.id.navigation);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
+
+            Fragment fragment;
+            switch (item.getItemId()) {
+                case R.id.navigation_more:
+                    fragment = new HomeFragment();
+                    break;
+                default:
+                    fragment = new SearchFragment();
+            }
+
+            setFragment(fragment, true);
+
+            return true;
+        });
+
+
     }
 
+
+    public void setFragment(Fragment fragment, boolean isAddToBackStack) {
+        FragmentTransaction fr = getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, fragment);
+        if (isAddToBackStack)
+            fr.addToBackStack(null);
+        fr.commit();
+    }
+
+
+    public void onClickAdd(View view){
+        Intent i = new Intent(MainActivity.this, StartActivity.class);
+        startActivity(i);
+    }
+
+    public void onClickSignGoOut(View view) {
+        FirebaseAuth.getInstance().signOut();
+        Intent i = new Intent(MainActivity.this, LoginActivity.class);
+        startActivity(i);
+    }
 }

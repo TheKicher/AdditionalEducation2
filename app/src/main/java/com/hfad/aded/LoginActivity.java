@@ -73,6 +73,7 @@ public class LoginActivity extends AppCompatActivity {
                     if(task.isSuccessful())
                     {
                         showSigned();
+                        sendEmailVer();
                         Toast.makeText(getApplicationContext(), "User SignUp Successful", Toast.LENGTH_SHORT).show();
                     }
                     else
@@ -114,15 +115,23 @@ public class LoginActivity extends AppCompatActivity {
         notSigned();
     }
     private void showSigned(){
-        tvUserEmail.setVisibility(View.VISIBLE);
-        bStart.setVisibility(View.VISIBLE);
-        bSignOut.setVisibility(View.VISIBLE);
-        edLogin.setVisibility(View.GONE);
-        edPassword.setVisibility(View.GONE);
-        bSignUp.setVisibility(View.GONE);
-        bSignIn.setVisibility(View.GONE);
+        FirebaseUser user = mAuth.getCurrentUser();
+        if(user.isEmailVerified()) {
+            String userName = "Вы вошли как: " + user.getEmail();
+            tvUserEmail.setText(userName );
+            tvUserEmail.setVisibility(View.VISIBLE);
+            bStart.setVisibility(View.VISIBLE);
+            bSignOut.setVisibility(View.VISIBLE);
+            edLogin.setVisibility(View.GONE);
+            edPassword.setVisibility(View.GONE);
+            bSignUp.setVisibility(View.GONE);
+            bSignIn.setVisibility(View.GONE);
+        }
+        else {
+            Toast.makeText(getApplicationContext(), "Подтвердите Email", Toast.LENGTH_SHORT).show();
+        }
     }
-    private void notSigned(){
+    public void notSigned(){
         tvUserEmail.setVisibility(View.GONE);
         bStart.setVisibility(View.GONE);
         bSignOut.setVisibility(View.GONE);
@@ -136,4 +145,21 @@ public class LoginActivity extends AppCompatActivity {
         Intent i = new Intent(LoginActivity.this, MainActivity.class);
         startActivity(i);
     }
+
+    private void sendEmailVer(){
+        FirebaseUser user = mAuth.getCurrentUser();
+        assert  user != null;
+        user.sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                    if(task.isSuccessful()){
+                        Toast.makeText(getApplicationContext(), "Подтвердите Email", Toast.LENGTH_SHORT).show();
+                    }
+                    else{
+                        Toast.makeText(getApplicationContext(), "Send email failed", Toast.LENGTH_SHORT).show();
+                    }
+            }
+        });
+    }
+
 }
