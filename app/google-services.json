@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "166454756334",
+    "project_id": "aded-3ac0d",
+    "storage_bucket": "aded-3ac0d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:166454756334:android:3dd2a4daace018829a04ff",
+        "android_client_info": {
+          "package_name": "com.hfad.aded"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "166454756334-4gpltugnt16802cd0krmp6g6t6v9d7ip.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0VyLlX2FkogMxOeSZAcGniD8oHd8YhTM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "166454756334-4gpltugnt16802cd0krmp6g6t6v9d7ip.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
