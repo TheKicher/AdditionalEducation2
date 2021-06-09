@@ -93,6 +93,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
 
+    public void onClickTest(View view){
+        Intent i = new Intent(MainActivity.this, MainActivity2.class);
+        startActivity(i);
+    }
+
 
 //
 //    private void init()

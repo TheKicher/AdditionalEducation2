@@ -155,107 +155,118 @@
         android:text="Уведомления"
         android:textSize="16sp" />
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:background="@color/white"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@android:color/white"
-            android:drawableStart="@drawable/ic_baseline_linerlayout_star_half"
-            android:drawablePadding="16dp"
-            android:paddingStart="16dp"
-            android:paddingTop="12dp"
-            android:paddingBottom="12dp"
-            android:text="Оценить приложение"
-            android:textSize="16sp" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginStart="56dp"
-            android:background="#E0E0E0" />
+            android:layout_marginTop="16dp"
+            android:background="@color/white"
+            android:orientation="vertical">
 
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/white"
-            android:drawableStart="@drawable/ic_baseline_linerlayout_book"
-            android:drawableEnd="@drawable/ic_baseline_linerlayout_chevron_right"
-            android:drawablePadding="16dp"
-            android:paddingStart="16dp"
-            android:paddingTop="12dp"
-            android:paddingBottom="12dp"
-            android:text="Статьи"
-            android:textSize="16sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:drawableStart="@drawable/ic_baseline_linerlayout_star_half"
+                android:drawablePadding="16dp"
+                android:paddingStart="16dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:text="Оценить приложение"
+                android:textSize="16sp" />
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginStart="56dp"
-            android:background="#E0E0E0" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="56dp"
+                android:background="#E0E0E0" />
 
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/white"
-            android:drawableStart="@drawable/ic_baseline_linerlatout_info"
-            android:drawableEnd="@drawable/ic_baseline_linerlayout_chevron_right"
-            android:drawablePadding="16dp"
-            android:paddingStart="16dp"
-            android:paddingTop="12dp"
-            android:paddingBottom="12dp"
-            android:text="О приложении"
-            android:textSize="16sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:drawableStart="@drawable/ic_baseline_linerlayout_book"
+                android:drawableEnd="@drawable/ic_baseline_linerlayout_chevron_right"
+                android:drawablePadding="16dp"
+                android:paddingStart="16dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:text="Статьи"
+                android:textSize="16sp" />
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginStart="56dp"
-            android:background="#E0E0E0" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="56dp"
+                android:background="#E0E0E0" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/white"
-            android:drawableStart="@drawable/ic_baseline_linerlayout_support"
-            android:drawableEnd="@drawable/ic_baseline_linerlayout_chevron_right"
-            android:drawablePadding="16dp"
-            android:paddingStart="16dp"
-            android:paddingTop="12dp"
-            android:paddingBottom="12dp"
-            android:text="Помощь"
-            android:textSize="16sp" />
 
-        <Button
-            android:id="@+id/bSignGoOut"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="onClickAdd"
-            android:text="Добавить" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:drawableStart="@drawable/ic_baseline_linerlatout_info"
+                android:drawableEnd="@drawable/ic_baseline_linerlayout_chevron_right"
+                android:drawablePadding="16dp"
+                android:paddingStart="16dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:text="О приложении"
+                android:textSize="16sp" />
 
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="onClickSignGoOut"
-            android:text="выход" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="56dp"
+                android:background="#E0E0E0" />
 
-        <Button
-            android:id="@+id/button4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="onClickRead"
-            android:text="Читать" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:drawableStart="@drawable/ic_baseline_linerlayout_support"
+                android:drawableEnd="@drawable/ic_baseline_linerlayout_chevron_right"
+                android:drawablePadding="16dp"
+                android:paddingStart="16dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:text="Помощь"
+                android:textSize="16sp" />
 
-    </LinearLayout>
+            <Button
+                android:id="@+id/bSignGoOut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClickAdd"
+                android:text="Добавить" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClickSignGoOut"
+                android:text="выход" />
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClickRead"
+                android:text="Читать" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClickTest"
+                android:text="Тест" />
+
+        </LinearLayout>
+    </ScrollView>
 
 
 </LinearLayout>
