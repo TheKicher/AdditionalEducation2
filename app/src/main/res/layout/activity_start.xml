@@ -69,7 +69,6 @@
         android:layout_marginStart="139dp"
         android:layout_marginTop="56dp"
         android:layout_marginEnd="179dp"
-        android:onClick="onClickRead"
         android:text="Read"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

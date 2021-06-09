@@ -48,8 +48,4 @@ public class StartActivity extends AppCompatActivity {
 
 
 
-    public  void onClickRead (View view){
-
-    }
-
 }
