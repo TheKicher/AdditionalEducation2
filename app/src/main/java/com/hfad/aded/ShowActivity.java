@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 public class ShowActivity extends AppCompatActivity {
 
-    private TextView tvName, tvSecName, tvEmail;
+    private TextView tvCity, tvName, tvProf;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,18 +22,18 @@ public class ShowActivity extends AppCompatActivity {
     }
     private void init()
     {
+        tvCity = findViewById(R.id.tvCity);
         tvName = findViewById(R.id.tvName);
-        tvSecName = findViewById(R.id.tvSecName);
-        tvEmail = findViewById(R.id.tvEmail);
+        tvProf = findViewById(R.id.tvProf);
     }
     private void getIntentMain()
     {
         Intent i = getIntent();
         if(i != null)
         {
+            tvCity.setText(i.getStringExtra(Constant.USER_CITY));
             tvName.setText(i.getStringExtra(Constant.USER_NAME));
-            tvSecName.setText(i.getStringExtra(Constant.USER_SEC_NAME));
-            tvEmail.setText(i.getStringExtra(Constant.USER_EMAIL));
+            tvProf.setText(i.getStringExtra(Constant.USER_PROF));
         }
     }
 }

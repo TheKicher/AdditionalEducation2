@@ -39,7 +39,7 @@
         app:layout_constraintTop_toBottomOf="@id/toolbar">
 
         <TextView
-
+            android:id="@+id/tvCity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
@@ -62,7 +62,7 @@
             app:layout_constraintTop_toBottomOf="@+id/name" />
 
         <TextView
-            android:id="@+id/tvSecName"
+            android:id="@+id/tvProf"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
@@ -79,7 +79,6 @@
 
 
         <TextView
-            android:id="@+id/tvEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"

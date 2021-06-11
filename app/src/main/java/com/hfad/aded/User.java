@@ -1,15 +1,29 @@
 package com.hfad.aded;
 
 public class User {
-    public String id, name, sec_name, email;
+
+    public User(String id, String city, String name, String prof, String disc, String price, String phone, String email) {
+        this.id = id;
+        this.city = city;
+        this.name = name;
+        this.prof = prof;
+        this.disc = disc;
+        this.price = price;
+        this.phone = phone;
+        this.email = email;
+    }
+
+    public String id;
+    public String city;
+    public String name;
+    public String prof;
+    public String disc;
+    public String price;
+    public String phone;
 
     public User() {
     }
 
-    public User(String id, String name, String sec_name, String email) {
-        this.id = id;
-        this.name = name;
-        this.sec_name = sec_name;
-        this.email = email;
-    }
+    public String email;
 }
+
