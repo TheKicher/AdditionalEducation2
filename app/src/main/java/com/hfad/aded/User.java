@@ -20,10 +20,12 @@ public class User {
     public String disc;
     public String price;
     public String phone;
+    public String email;
+
 
     public User() {
     }
 
-    public String email;
+
 }
 

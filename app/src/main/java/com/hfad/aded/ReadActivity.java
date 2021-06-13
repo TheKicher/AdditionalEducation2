@@ -61,7 +61,6 @@ public class ReadActivity extends AppCompatActivity {
                     listTemp.add(user);
                 }
                 adapter.notifyDataSetChanged();
-
             }
 
             @Override

@@ -79,6 +79,7 @@
 
 
         <TextView
+            android:id="@+id/tvDisc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
@@ -106,7 +107,7 @@
             android:textStyle="bold"/>
 
         <TextView
-
+            android:id="@+id/tvPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
@@ -126,7 +127,7 @@
             android:textStyle="bold"/>
 
         <TextView
-
+            android:id="@+id/tvPhone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
@@ -138,7 +139,7 @@
             app:layout_constraintTop_toBottomOf="@+id/name"
             android:textStyle="bold"/>
         <TextView
-
+            android:id="@+id/tvEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
@@ -149,6 +150,44 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/name"
             android:textStyle="bold"/>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+            <EditText android:id="@+id/message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cursorVisible="true"
+                android:hint="Введите сообщение"
+               android:visibility="gone"
+                android:singleLine="false"></EditText>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="40dp"
+                android:onClick="onSendCall"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="Позвонить" />
+
+            <Button
+                android:id="@+id/sms"
+                android:onClick="onSendMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="40dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_alignParentRight="true"
+
+                android:text="Написать"/>
+
+        </RelativeLayout>
 
 
     </LinearLayout>
