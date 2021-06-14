@@ -11,9 +11,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.Launcher">
-        <activity android:name=".MainActivity2" />
-        <activity android:name=".ListviewActivity" />
-        <activity android:name=".ReadActivity" />
         <activity android:name=".ShowActivity" />
         <activity android:name=".StartActivity" />
         <activity

@@ -13,8 +13,7 @@
         android:background="@android:color/white"
         android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/menu_more">
+        app:layout_constraintStart_toStartOf="parent">
 
         <TextView
             android:id="@+id/toolbar_title"
@@ -155,9 +154,6 @@
         android:text="Уведомления"
         android:textSize="16sp" />
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -238,38 +234,31 @@
                 android:text="Помощь"
                 android:textSize="16sp" />
 
-            <Button
-                android:id="@+id/bSignGoOut"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="onClickAdd"
-                android:text="Добавить"
-                android:visibility="visible" />
 
-            <Button
-                android:id="@+id/button3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="onClickSignGoOut"
-                android:text="выход" />
-
-            <Button
-                android:id="@+id/button4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="onClickRead"
-                android:text="Читать"
-                android:visibility="visible" />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="onClickTest"
-                android:text="Тест"
-                android:visibility="visible" />
 
         </LinearLayout>
-    </ScrollView>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/bSignGoOut"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onClickAdd"
+                    android:text="Добавить"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onClickSignGoOut"
+                    android:text="выход"
+                    android:layout_alignParentBottom="true"/>
+            </RelativeLayout>
+
+
 
 
 </LinearLayout>

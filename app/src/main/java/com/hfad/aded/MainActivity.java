@@ -87,10 +87,6 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
 
-    public void onClickRead(View view){
-        Intent i = new Intent(MainActivity.this, ReadActivity.class);
-        startActivity(i);
-    }
 
 //    public void onClickTest(View view){
 //        Intent i = new Intent(MainActivity.this, UserList.class);
