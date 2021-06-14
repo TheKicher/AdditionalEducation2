@@ -61,7 +61,6 @@ public class MainActivity extends AppCompatActivity {
             }
 
             setFragment(fragment, true);
-
             return true;
         });
 
@@ -93,10 +92,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
 
-    public void onClickTest(View view){
-        Intent i = new Intent(MainActivity.this, MainActivity2.class);
-        startActivity(i);
-    }
+//    public void onClickTest(View view){
+//        Intent i = new Intent(MainActivity.this, UserList.class);
+//        startActivity(i);
+//    }
 
 
 //
