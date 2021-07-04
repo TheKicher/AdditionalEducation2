@@ -9,7 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
-import android.widget.LinearLayout;
+
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -17,7 +17,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.firebase.ui.database.FirebaseRecyclerAdapter_LifecycleAdapter;
+
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -29,7 +29,7 @@ import com.hfad.aded.ShowActivity;
 import com.hfad.aded.User;
 
 import java.util.ArrayList;
-import java.util.Collections;
+
 import java.util.List;
 
 import static android.content.ContentValues.TAG;
@@ -40,8 +40,6 @@ public class SearchFragment extends Fragment implements MyAdapter.OnClickListene
     DatabaseReference database;
     private MyAdapter myAdapter;
     ArrayList<User> list;
-    private List<User> listTemp;
-    private DatabaseReference mDataBase;
     private String USER_KEY = "User";
 
     @Nullable
@@ -71,7 +69,6 @@ public class SearchFragment extends Fragment implements MyAdapter.OnClickListene
         database = FirebaseDatabase.getInstance().getReference(USER_KEY);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
-        listTemp = new ArrayList<>();
         list = new ArrayList<>();
 
         myAdapter = new MyAdapter(getActivity(), list, this);

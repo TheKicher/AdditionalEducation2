@@ -7,11 +7,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.RecyclerView;
 
+import androidx.recyclerview.widget.RecyclerView;
 import com.hfad.aded.R;
-import com.hfad.aded.ShowActivity;
 import com.hfad.aded.User;
 
 import java.util.ArrayList;
